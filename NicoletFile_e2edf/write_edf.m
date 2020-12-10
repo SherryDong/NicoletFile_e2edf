@@ -31,7 +31,8 @@ function write_edf(filename, sensor, samplingRate, ori_data)
 %    along with FieldTrip. If not, see <http://www.gnu.org/licenses/>.
 %
 % $Id$
-data = transpose(ori_data)/1000000;
+data = transpose(ori_data);
+%data = transpose(ori_data)/1000000;
 [nChans,nSamples] = size(data);
 
 if nChans > 9999
